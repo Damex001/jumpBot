@@ -1,0 +1,34 @@
+.blurred-navbar {
+  background: rgba(0, 0, 0, 0.4); /* semi-transparent black */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* for Safari */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* optional border */
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1030; /* higher than default to stay above content */
+}
+
+.navbar-nav li a {
+  position: relative;
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  padding: 8px ;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  height: 2px;
+  width: 0;
+  background-color: cyan;
+  transition: width 0.3s ease;
+}
+
+.navbar-nav li a:hover::after {
+  width: 100%;
+}
