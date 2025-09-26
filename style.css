@@ -1,3 +1,7 @@
+body {
+    background: #021017;
+}
+
 .blurred-navbar {
   background: rgba(0, 0, 0, 0.4); /* semi-transparent black */
   backdrop-filter: blur(10px);
@@ -25,10 +29,121 @@
   bottom: -3px;
   height: 2px;
   width: 0;
-  background-color: cyan;
+  background-color: #0dcaf0;
   transition: width 0.3s ease;
 }
 
 .navbar-nav li a:hover::after {
   width: 100%;
+}
+
+.btn-gradient {
+  background-image: linear-gradient(90deg, #004a58, #0dcaf0);
+  border: none;
+  color: white;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.btn-gradient:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(55, 208, 255, 0.5);
+}
+
+
+.btn-gradient-two {
+    text-decoration: none;
+  display: inline-block;
+  padding: 2px; /* space for the outline */
+  border-radius: 20px;
+  background: linear-gradient(90deg, #004a58, #0dcaf0); /* your gradient */
+  transform: translateY(-4px);
+  transition: 0.2s;
+}
+
+.btn-gradient-two span {
+  display: block;
+  padding: 11px 38px;
+  border-radius: 25px;
+  background-color: #021017;
+  color: white;
+  font-weight: bold;
+}
+
+.btn-gradient-two:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(55, 208, 255, 0.5);
+}
+
+.hero-heading {
+  font-size: clamp(1.5rem, 6vw, 4rem);
+  font-weight: 700;
+}
+
+.img-box {
+  display: inline-block;
+  background-color: #011924;
+  padding: 10px;
+  border: 2px solid #0dcaf0;
+  border-radius: 10px;
+}
+
+.img-box img {
+  width:35px;
+  height: auto;
+  display: block;
+}
+
+.why-text {
+    margin-top: 90px;
+    font-size: 50px;
+}
+
+.shadow-card {
+  box-shadow: 0 0px 13px rgba(0, 255, 255, 0.3); /* bluish glow */
+  transition: all 0.3s ease-in-out;
+  background-color: #011b27;
+}
+
+/* Optional hover effect */
+.shadow-card:hover {
+  box-shadow: 0 5px 22px rgba(0, 255, 255, 0.6);
+  transform: translateY(-5px);
+}
+
+.br-md-only {
+  display: none;
+}
+
+/* Show only on md (tablet screens 768px – 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .br-md-only {
+    display: block;
+  }
+}
+
+.ribbon {
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  position: absolute;
+  top: 1px;
+  right: 1px;
+}
+
+.ribbon span {
+  position: absolute;
+  display: block;
+  width: 200px;
+  padding: 5px 0;
+  background: #0dcaf0; /* Bootstrap info color */
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  transform: rotate(45deg);
+  top: 30px;
+  right: -55px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+  font-size: 0.9rem;
 }
