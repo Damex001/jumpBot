@@ -147,3 +147,99 @@ body {
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
   font-size: 0.9rem;
 }
+
+.custom-card {
+  background-color: #011924;
+  box-shadow: 0 2px 13px rgba(0, 255, 255, 0.3); /* Dark background */
+  color: white;
+  height: 350px; /* Make it taller */
+}
+
+.timeline {
+  position: relative;
+  padding: 2rem 0;
+  margin: 0 auto;
+  max-width: 900px;
+}
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 5px;
+  background: #0dcaf0; /* green line */
+  transform: translateX(-50%);
+  border-radius: 20px;
+}
+
+/* Each card wrapper */
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 1rem 2rem;
+}
+.timeline-item.left {
+  left: 0;
+  text-align: right;
+}
+.timeline-item.right {
+  left: 50%;
+}
+
+/* Card style */
+.timeline-card {
+  background: #011924;
+  padding: 1rem 1.5rem;
+  border-radius: 6px;
+  border-left: 4px solid #0dcaf0;
+  color: #ccc;
+}
+.timeline-year {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #0dcaf0;
+  margin-bottom: .5rem;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 20px;
+  }
+  .timeline-item {
+    width: 100%;
+    padding-left: 60px;
+    text-align: left !important;
+  }
+  .timeline-item.right {
+    left: 0;
+  }
+  .timeline-dot {
+    left: 20px;
+    transform: translateX(0);
+  }
+}
+
+.list-gb {
+  background-color: #00090e;
+}
+
+.bg-trans {
+  background-color: #fff;
+  box-shadow: 0 0 7px rgba(0, 255, 255, 0.3);
+}
+
+.main-footer {
+  margin-top: 20px;
+  padding: 40px 0;
+  background-color: #00090e;
+}
+
+/* Make spacing cleaner on small screens */
+@media (max-width: 768px) {
+  .main-footer {
+    text-align: center;
+  }
+
+  }
